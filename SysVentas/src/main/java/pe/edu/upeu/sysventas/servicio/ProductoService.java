@@ -35,6 +35,7 @@ public class ProductoService {
     public Producto buscarProducto(Long idProducto) {
         return productoRepository.findById(idProducto).orElse(null);
     }
+
     /*public List<ModeloDataAutocomplet> listAutoCompletProducto(String
                                                                        nombre) {
         List<ModeloDataAutocomplet> listarProducto = new ArrayList<>();

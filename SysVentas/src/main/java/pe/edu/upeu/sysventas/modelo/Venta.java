@@ -1,5 +1,4 @@
 package pe.edu.upeu.sysventas.modelo;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,12 +24,15 @@ public class Venta {
     @Column(name = "igv", nullable = false)
     private Double igv;
     @Column(name = "preciototal", nullable = false)
-    private Double precioTotal;
-    @ManyToOne
-    @JoinColumn(name = "dniruc", referencedColumnName = "dniruc", nullable = false, foreignKey = @ForeignKey(name = "FK_CLIENTE_VENTA"))
+    private Double precioTotal;@ManyToOne
+    @JoinColumn(name = "dniruc", referencedColumnName = "dniruc",
+            nullable = false, foreignKey = @ForeignKey(name =
+            "FK_CLIENTE_VENTA"))
     private Cliente cliente;
     @ManyToOne
-    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario", nullable = false, foreignKey = @ForeignKey(name = "FK_USUARIO_VENTA"))
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario",
+            nullable = false, foreignKey = @ForeignKey(name =
+            "FK_USUARIO_VENTA"))
     private Usuario usuario;
     @Column(name = "num_doc", nullable = false, length = 20)
     private String numDoc;

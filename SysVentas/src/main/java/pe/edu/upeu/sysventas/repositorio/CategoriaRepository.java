@@ -6,5 +6,5 @@ import pe.edu.upeu.sysventas.modelo.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
-}
 
+}

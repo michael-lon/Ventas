@@ -1,11 +1,9 @@
 package pe.edu.upeu.sysventas.modelo;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,8 +18,7 @@ public class Emisor {
     @Column(name = "ruc", nullable = false, length = 12)
     private String ruc;
     @Column(name = "nombre_comercial", nullable = false, length = 160)
-    private String nombreComercial;
-    @Column(name = "ubigeo", nullable = false, length = 8)
+    private String nombreComercial;@Column(name = "ubigeo", nullable = false, length = 8)
     private String ubigeo;
     @Column(name = "domicilio_fiscal", nullable = false, length = 120)
     private String domicilioFiscal;

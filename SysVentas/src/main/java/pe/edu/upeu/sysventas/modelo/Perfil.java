@@ -1,8 +1,9 @@
 package pe.edu.upeu.sysventas.modelo;
-
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "upeu_perfil")

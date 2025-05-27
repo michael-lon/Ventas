@@ -38,11 +38,14 @@ public class VentCarritoService{
     public VentCarrito buscarEntidad(Long id) {
         return ventCarritoRepository.findById(id).orElse(null);
     }
+
     public List<VentCarrito> listaCarritoCliente(String dni) {
         return ventCarritoRepository.listaCarritoCliente(dni);
     }
+
     @Transactional
     public void deleteCarAll(String dniruc) {
-        this.ventCarritoRepository.deleteByDniruc(dniruc);
+        ventCarritoRepository.deleteByDniruc(dniruc);
     }
+
 }

@@ -1,11 +1,9 @@
 package pe.edu.upeu.sysventas.modelo;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,9 +24,12 @@ public class VentaDetalle {
     @Column(name = "subtotal", nullable = false)
     private Double subtotal;
     @ManyToOne
-    @JoinColumn(name = "id_venta", referencedColumnName = "id_venta", nullable = false, foreignKey = @ForeignKey(name = "FK_VENTA_VENTADETALLE"))
+    @JoinColumn(name = "id_venta", referencedColumnName = "id_venta",
+            nullable = false, foreignKey = @ForeignKey(name =
+            "FK_VENTA_VENTADETALLE"))
     private Venta venta;
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto", nullable = false, foreignKey = @ForeignKey(name = "FK_PRODUCTO_VENTADETALLE"))
+    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto",
+            nullable = false, foreignKey = @ForeignKey(name ="FK_PRODUCTO_VENTADETALLE"))
     private Producto producto;
 }

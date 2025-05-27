@@ -1,11 +1,9 @@
 package pe.edu.upeu.sysventas.modelo;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,4 +34,3 @@ public class VentCarrito {
     @JoinColumn(name = "id_usuario", nullable = false)
     public Usuario usuario;
 }
-
