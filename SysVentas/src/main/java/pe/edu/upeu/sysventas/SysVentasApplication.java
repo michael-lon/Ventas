@@ -46,7 +46,7 @@ public class SysVentasApplication extends Application /*implements CommandLineRu
 	public void start(Stage stage) throws Exception {
 		Scene scene = new Scene(parent);
 		scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
-		//scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
 		stage.setScene(scene);
 		stage.setTitle("SysAlmacen Spring Java-FX");
 		stage.setResizable(false);
